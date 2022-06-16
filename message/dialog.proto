@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "disco/animal";
+
+package animal;
+
+service AnimalDialog {
+
+  rpc UniAnimal (AnimalRequest) returns (AnimalResponse) {}
+
+  rpc ServStreamAnimal (AnimalRequest) returns (stream AnimalResponse) {}
+
+  rpc CliStreamAnimal (stream AnimalRequest) returns (AnimalResponse) {}
+
+  rpc BiAnimal (stream AnimalRequest) returns (stream AnimalResponse) {}
+}
+
+message AnimalRequest {
+  string food = 1;
+}
+
+message AnimalResponse {
+  string eat = 1;
+}

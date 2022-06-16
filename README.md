@@ -1,1 +1,3 @@
-# go-grpc-discovery
+# gRPC with Go
+
+A basic gRPC service.
